@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+
+      convertLength(50, 'miles', 'km');
+      convertLength(32, 'km', 'miles');
+      convertLength(32, 'km', 'km');
+
+      function convertLength(length, from, to) {
+        if (from === 'miles') {
+          let convert_to_km = Math.round(1.6 * length); // Formula for Miles to KM
+
+          let distance = console.log(convert_to_km + to);
+
+          return distance;
+        }
+
+        else if (from === 'km') {
+          let convert_to_km = Math.ceil(0.6 * length); // Formula for Miles to KM
+
+          let distance = console.log(convert_to_km + to);
+
+          return distance;
+        }
+        else {
+          let distance = console.log(length + from); // if you want you can also name 'from' + 'to'
+
+          return distance;
+        }
+      }
+    </script>
+  </body>
+</html>
