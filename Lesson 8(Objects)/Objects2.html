@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const products = {
+        name: 'Shirt',
+        ['Delivery-time']: '1-day',//assign a value using bracket method
+        rating: {     //nested object
+          stars: 4.5,
+          count: 77
+        },
+        fun: function function1() {
+          console.log('This is a function inside the object'); // function inside the object called Method.
+          
+        }
+      };
+
+      console.log(products.name);
+      console.log(products['name']);
+      console.log(products['Delivery-time']); //Bracket method
+      
+      console.log(products.rating.count); //accessing nesteed object by adding multiple '.'
+      
+      products.fun(); // called the Method
+
+      console.log(typeof Math.random);
+      
+      
+    </script>
+  </body>
+</html>
