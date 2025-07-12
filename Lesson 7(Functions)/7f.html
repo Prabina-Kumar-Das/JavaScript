@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+
+      convertToTemprature(25, 'C');
+      convertToTemprature(86, 'F')
+
+      
+
+      function convertToTemprature(Temp, unit) {
+
+        if (unit === 'C') {
+
+          let Temprature = (Temp * 9 / 5) + 32; //celsius to Fahrenheit
+          let converted_temp = console.log(`${Temprature}F`);
+      
+          return converted_temp;
+          
+        }
+
+        else {
+
+          let Temprature = (Temp - 32) * 5 / 9; // Fahrenheit to celsius
+          let converted_temp = console.log(`${Temprature}C`);
+
+          return converted_temp;
+        }
+
+        
+      }
+    </script>
+  </body>
+</html>
