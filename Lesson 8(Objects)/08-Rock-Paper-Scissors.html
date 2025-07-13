@@ -34,13 +34,14 @@
     </button>
 
     <script>
+      
 
-      const Score = {
-        wins: 0,
-        losses: 0,
-        ties: 0
-      };
+      const Score = JSON.parse(localStorage.getItem('Score')); // by tracking back to the the object the ue have used localstorage function
+      
       function playGame(playerMove) {
+
+        localStorage.setItem('Name', 'Prabina');
+        localStorage.setItem('Title', 'Das');
         computermove = pickComputerMove();
 
           result = '';
@@ -102,8 +103,7 @@ Wins: ${Score.wins}, Loses: ${Score.losses}, Ties: ${Score.ties}`);
             Score.losses = 0;
             Score.ties = 0;
           }
-//           alert(`You picked rock Computer picked ${computermove}. ${result}.
-// Wins: ${Score.wins}, Loses: ${Score.losses}, Ties: ${Score.ties}`);
+
       }
 
       function pickComputerMove () {
@@ -133,9 +133,11 @@ Wins: ${Score.wins}, Loses: ${Score.losses}, Ties: ${Score.ties}`);
             else if (result === 'Tie.') {
               Score.ties += 1;
             }
+            localStorage.setItem('Score', JSON.stringify(Score));
+            
       }
 
-     
+      
     </script>
   </body>
 </html>
